@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acquios Feedback Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .feedback-form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+      .feedback-form img {
+        width: 100px;
+        margin-bottom: 20px;
+      }
+      .feedback-form input[type="text"],
+      .feedback-form input[type="email"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .feedback-form .stars input {
+        display: none;
+      }
+      .feedback-form .stars label {
+        font-size: 24px;
+        color: lightgray;
+        cursor: pointer;
+      }
+      .feedback-form .stars input:checked ~ label,
+      .feedback-form .stars input:checked ~ label ~ label {
+        color: gold;
+      }
+      .feedback-form .checkboxes label {
+        display: block;
+        margin: 5px 0;
+        font-size: 14px;
+        color: #666;
+      }
+      .feedback-form input[type="checkbox"] {
+        margin-right: 10px;
+      }
+      .feedback-form button {
+        background-color: #f08c51;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .feedback-form button:hover {
+        background-color: #e07b42;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="feedback-form">
+      <img
+        src="https://tse2.mm.bing.net/th?id=OIP.R87PbOkdc695AAZ-_qrLYwHaHk&pid=Api&P=0&h=180"
+        alt="Acquios Logo" />
+      <input type="text" name="first-name" placeholder="First Name*" required />
+      <input type="text" name="last-name" placeholder="Last Name*" required />
+      <input type="email" name="email" placeholder="Email Address*" required />
+
+      <div class="stars">
+        <p>How was your overall experience?*</p>
+        <input type="radio" id="star1" name="rating" value="1" />
+        <label for="star1">★</label>
+        <input type="radio" id="star2" name="rating" value="2" />
+        <label for="star2">★</label>
+        <input type="radio" id="star3" name="rating" value="3" />
+        <label for="star3">★</label>
+        <input type="radio" id="star4" name="rating" value="4" />
+        <label for="star4">★</label>
+        <input type="radio" id="star5" name="rating" value="5" />
+        <label for="star5">★</label>
+      </div>
+
+      <div class="checkboxes">
+        <p>Was our representative (check all that apply):</p>
+        <label
+          ><input type="checkbox" name="representative" value="professional" />
+          Professional and courteous?</label
+        >
+        <label
+          ><input type="checkbox" name="representative" value="knowledgeable" />
+          Knowledgeable?</label
+        >
+        <label
+          ><input type="checkbox" name="representative" value="friendly" />
+          Friendly?</label
+        >
+        <label
+          ><input type="checkbox" name="representative" value="efficient" />
+          Efficient?</label
+        >
+        <label
+          ><input type="checkbox" name="representative" value="patient" />
+          Patient?</label
+        >
+        <label
+          ><input type="checkbox" name="representative" value="warm" /> Warm and
+          respectful?</label
+        >
+        <label
+          ><input type="checkbox" name="representative" value="clear" /> Clear
+          and direct?</label
+        >
+      </div>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </body>
+</html>
